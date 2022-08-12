@@ -55,16 +55,14 @@ class _HomeBluetoothState extends State<HomeBluetooth> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  if (isMobileWidth(context))
-                    if (isMobileHeight(context))
-                      Container(
-                        margin: const EdgeInsets.fromLTRB(164, 80, 164, 8),
-                        child: const Icon(
-                          Icons.bluetooth_disabled,
-                          color: Colors.grey,
-                          size: 30,
-                        ),
-                      ),
+                  Container(
+                    margin: const EdgeInsets.fromLTRB(164, 80, 164, 8),
+                    child: const Icon(
+                      Icons.bluetooth_disabled,
+                      color: Colors.grey,
+                      size: 30,
+                    ),
+                  ),
                   Container(
                     margin: const EdgeInsets.fromLTRB(121, 0, 120, 24),
                     child: const Text(
