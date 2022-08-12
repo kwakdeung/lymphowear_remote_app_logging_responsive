@@ -11,11 +11,6 @@ class PairingPage extends StatefulWidget {
 }
 
 class _PairingPageState extends State<PairingPage> {
-  bool isButtonActive = true;
-  late PageController pageController;
-  int pageIndex = 0;
-  int curIndex = 0;
-
   @override
   void initState() {
     super.initState();
@@ -23,14 +18,11 @@ class _PairingPageState extends State<PairingPage> {
 
   @override
   void dispose() {
-    pageController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    // return ResponsiveBuilder(
-    //   builder: (context, sizingInformation) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
@@ -85,7 +77,6 @@ class _PairingPageState extends State<PairingPage> {
             Container(
               margin: const EdgeInsets.fromLTRB(20, 104, 20, 80),
               padding: const EdgeInsets.fromLTRB(12, 24, 12, 24),
-              alignment: Alignment.center,
               decoration: const BoxDecoration(
                 shape: BoxShape.rectangle,
                 color: Colors.white,
@@ -114,7 +105,5 @@ class _PairingPageState extends State<PairingPage> {
         ),
       ),
     );
-    //   },
-    // );
   }
 }

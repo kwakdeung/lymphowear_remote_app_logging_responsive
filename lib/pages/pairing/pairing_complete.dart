@@ -12,11 +12,6 @@ class PairingComplete extends StatefulWidget {
 }
 
 class _PairingCompleteState extends State<PairingComplete> {
-  bool isButtonActive = true;
-  late PageController pageController;
-  int pageIndex = 0;
-  int curIndex = 0;
-
   @override
   void initState() {
     super.initState();
@@ -24,13 +19,11 @@ class _PairingCompleteState extends State<PairingComplete> {
 
   @override
   void dispose() {
-    // pageController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    pageController = PageController();
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
@@ -57,7 +50,6 @@ class _PairingCompleteState extends State<PairingComplete> {
             )),
         centerTitle: true,
       ),
-
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -84,16 +76,15 @@ class _PairingCompleteState extends State<PairingComplete> {
               ),
             ),
             Container(
-              margin: const EdgeInsets.fromLTRB(20, 0, 20, 80), // 이놈이 문제
+              margin: const EdgeInsets.fromLTRB(20, 0, 20, 80),
               padding: bottombuttonpadding,
-              alignment: Alignment.center,
               decoration: const BoxDecoration(
                 shape: BoxShape.rectangle,
                 color: Colors.white,
               ),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(320, 48), // 왼쪽 width 미디어 쿼리 적용하기
+                  fixedSize: const Size(320, 48),
                   primary: Colors.green[500],
                   onPrimary: Colors.white,
                   textStyle: const TextStyle(
@@ -103,18 +94,15 @@ class _PairingCompleteState extends State<PairingComplete> {
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: ((context) =>
-                            const HomeNone()), // Home_name 페이지로
+                        builder: ((context) => const HomeNone()),
                       ));
                 },
-
-                // 페이지 중 앱바 유지 위젯만 바꾸기
                 child: const Text('Start'),
               ),
             ),
           ],
         ),
-      ), // Start Button
+      ),
     );
   }
 }

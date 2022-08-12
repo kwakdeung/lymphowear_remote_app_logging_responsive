@@ -38,7 +38,6 @@ class HomeNone extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  // size 맞추기
                   margin: const EdgeInsets.fromLTRB(63, 40, 63, 8),
                   child: Image.asset(
                     'assets/images/Home_none_title.png',
@@ -46,7 +45,6 @@ class HomeNone extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  // size 맞추기
                   margin: const EdgeInsets.fromLTRB(102, 0, 102, 24),
                   child: Image.asset(
                     'assets/images/Home_none_content.png',
@@ -54,15 +52,14 @@ class HomeNone extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  // size 맞추기
-                  margin: const EdgeInsets.fromLTRB(60, 0, 60, 100),
+                  margin: const EdgeInsets.fromLTRB(60, 0, 60, 48),
                   child: Image.asset(
                     'assets/images/Home_none_image.png',
                     fit: BoxFit.fill,
                   ),
                 ),
                 Container(
-                  margin: const EdgeInsets.fromLTRB(20, 80, 20, 80),
+                  margin: const EdgeInsets.fromLTRB(20, 100, 20, 60),
                   padding: const EdgeInsets.fromLTRB(12, 24, 12, 16),
                   child: ElevatedButton.icon(
                     onPressed: () {

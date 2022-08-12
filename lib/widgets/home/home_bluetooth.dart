@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:lymphowear_remote_app_logging_responsive/pages/home_none.dart';
 import 'package:lymphowear_remote_app_logging_responsive/ui/responsive/responsive_builder.dart';
 import 'package:lymphowear_remote_app_logging_responsive/widgets/home/home_default.dart';
@@ -55,18 +56,17 @@ class _HomeBluetoothState extends State<HomeBluetooth> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
-                    margin: const EdgeInsets.fromLTRB(164, 80, 164, 8),
+                    margin: const EdgeInsets.fromLTRB(164, 78, 164, 8),
                     child: const Icon(
                       Icons.bluetooth_disabled,
                       color: Colors.grey,
-                      size: 30,
                     ),
                   ),
                   Container(
                     margin: const EdgeInsets.fromLTRB(121, 0, 120, 24),
                     child: const Text(
                       'Not connected',
-                      style: TextStyle(fontSize: 16, color: Colors.grey),
+                      style: TextStyle(color: Colors.grey),
                     ),
                   ),
                   Container(

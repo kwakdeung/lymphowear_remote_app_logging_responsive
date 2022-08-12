@@ -9,11 +9,6 @@ class PairingConnect extends StatefulWidget {
 }
 
 class _PairingConnectState extends State<PairingConnect> {
-  bool isButtonActive = true;
-  late PageController pageController;
-  int pageIndex = 0;
-  int curIndex = 0;
-
   @override
   void initState() {
     super.initState();
@@ -21,14 +16,11 @@ class _PairingConnectState extends State<PairingConnect> {
 
   @override
   void dispose() {
-    pageController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    pageController = PageController();
-
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
@@ -64,8 +56,6 @@ class _PairingConnectState extends State<PairingConnect> {
             children: [
               Container(
                 margin: const EdgeInsets.fromLTRB(91, 56, 91, 16),
-                // width: 178, // log
-                // height: 20,
                 child: Image.asset(
                   'assets/images/Pairing03_text.png',
                   fit: BoxFit.fill,
@@ -73,8 +63,6 @@ class _PairingConnectState extends State<PairingConnect> {
               ),
               Container(
                 margin: const EdgeInsets.fromLTRB(63, 0, 63, 0),
-                // width: 234, // log
-                // height: 166,
                 child: Image.asset(
                   'assets/images/Pairing03_image.png',
                   fit: BoxFit.fill,
@@ -85,15 +73,13 @@ class _PairingConnectState extends State<PairingConnect> {
                 padding: const EdgeInsets.fromLTRB(16, 32, 16, 32),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(320, 48), // 왼쪽 width 미디어 쿼리 적용하기
+                    fixedSize: const Size(320, 48),
                     primary: Colors.green[500],
                     onPrimary: Colors.white,
                     textStyle: const TextStyle(
                         fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                   onPressed: () => showProgressDialog('Pairing...'),
-
-                  // 페이지 중 앱바 유지 위젯만 바꾸기
                   child: const Text('Connect'),
                 ),
               ),
@@ -109,10 +95,8 @@ class _PairingConnectState extends State<PairingConnect> {
       context: context,
       builder: (BuildContext context) {
         Future.delayed(const Duration(seconds: 5), () {
-          Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => const PairingComplete())); // start
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) => const PairingComplete()));
         });
         return Theme(
           data: ThemeData(dialogBackgroundColor: Colors.white),

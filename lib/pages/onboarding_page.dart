@@ -19,13 +19,11 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
   @override
   void initState() {
-    // 위젯 생성 시
     super.initState();
   }
 
   @override
   void dispose() {
-    // 위젯 종료 시
     pageController.dispose();
     super.dispose();
   }
@@ -38,8 +36,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
             0.65); // viewportFraction - PageView 이전, 다음 페이지 약간 보이게 하는 효과
 
     return Scaffold(
-        resizeToAvoidBottomInset:
-            false, // A RenderFlex overflowed by xx pixels on the bottom 해결
+        resizeToAvoidBottomInset: false,
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -47,8 +44,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
               Container(
                 margin: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                 padding: const EdgeInsets.all(0.0),
-                width: double.infinity, // 크기를 지정하지 않으면 부모의 크기
-                height: 432, // Log - media 크기 맞추기
+                width: double.infinity,
+                height: 432, // Log - 반응형으로 맞추기
                 alignment: Alignment.center,
                 decoration: const BoxDecoration(
                   shape: BoxShape.rectangle,
@@ -80,8 +77,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         ))),
               ),
               Container(
-                // Log
-                margin: bottombuttonmargin,
+                margin: const EdgeInsets.fromLTRB(20, 60, 20, 80),
                 padding: bottombuttonpadding,
                 alignment: Alignment.center,
                 decoration: const BoxDecoration(
@@ -98,7 +94,6 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   ),
                   onPressed: () {
                     Navigator.pushReplacement(
-                      // onboarding의 Button이 Skip이기 때문에 back이 안되게 하고 종료 시키기 위해 Navigator.pushReplacement()를 사용
                       context,
                       PageRouteBuilder(
                         pageBuilder: (context, animation1, animation2) =>
@@ -106,7 +101,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       ),
                     );
                   },
-                  child: const Text('Skip'), // 함수 호출
+                  child: const Text('Skip'),
                 ),
               ),
             ],
