@@ -24,77 +24,73 @@ class _HomeBluetoothState extends State<HomeBluetooth> {
 
   @override
   Widget build(BuildContext context) {
-    return ResponsiveBuilder(
-      builder: (context, sizingInformation) {
-        return Scaffold(
-          backgroundColor: Colors.white,
-          resizeToAvoidBottomInset: false,
-          appBar: AppBar(
-            automaticallyImplyLeading: false,
-            title: const Text(
-              'LymphoWear',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            centerTitle: true,
-            bottom: PreferredSize(
-                preferredSize: const Size.fromHeight(0),
-                child: Container(
-                  color: Colors.grey[200],
-                  height: 2.0,
-                )),
-            actions: <Widget>[
-              IconButton(
-                  icon: const Icon(Icons.settings_outlined), onPressed: () {}),
+    return Scaffold(
+      backgroundColor: Colors.white,
+      resizeToAvoidBottomInset: false,
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: const Text(
+          'LymphoWear',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
+        bottom: PreferredSize(
+            preferredSize: const Size.fromHeight(0),
+            child: Container(
+              color: Colors.grey[200],
+              height: 2.0,
+            )),
+        actions: <Widget>[
+          IconButton(
+              icon: const Icon(Icons.settings_outlined), onPressed: () {}),
+        ],
+      ),
+      body: Center(
+        child: Container(
+          padding: const EdgeInsets.all(0),
+          color: Colors.grey[100],
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Container(
+                margin: const EdgeInsets.fromLTRB(164, 78, 164, 8),
+                child: const Icon(
+                  Icons.bluetooth_disabled,
+                  color: Colors.grey,
+                  size: 32,
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.fromLTRB(121, 0, 120, 24),
+                child: const Text(
+                  'Not connected',
+                  style: TextStyle(fontSize: 16, color: Colors.grey),
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.fromLTRB(125.5, 0, 125.5, 352),
+                padding: const EdgeInsets.fromLTRB(10, 24, 10, 24),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      primary: Colors.white,
+                      fixedSize: const Size(109, double.infinity),
+                      side: const BorderSide(color: Colors.green)),
+                  onPressed: () {
+                    showProgressDialog('Connecting...');
+                  },
+                  child: const FittedBox(
+                    child: Text(
+                      'Connect',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
-          body: Center(
-            child: Container(
-              padding: const EdgeInsets.all(0),
-              color: Colors.grey[100],
-              width: double.infinity,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                    margin: const EdgeInsets.fromLTRB(164, 78, 164, 8),
-                    child: const Icon(
-                      Icons.bluetooth_disabled,
-                      color: Colors.grey,
-                      size: 32,
-                    ),
-                  ),
-                  Container(
-                    margin: const EdgeInsets.fromLTRB(121, 0, 120, 24),
-                    child: const Text(
-                      'Not connected',
-                      style: TextStyle(fontSize: 16, color: Colors.grey),
-                    ),
-                  ),
-                  Container(
-                    margin: const EdgeInsets.fromLTRB(125.5, 0, 125.5, 352),
-                    padding: const EdgeInsets.fromLTRB(10, 24, 10, 24),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          primary: Colors.white,
-                          fixedSize: const Size(109, double.infinity),
-                          side: const BorderSide(color: Colors.green)),
-                      onPressed: () {
-                        showProgressDialog('Connecting...');
-                      },
-                      child: const FittedBox(
-                        child: Text(
-                          'Connect',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        );
-      },
+        ),
+      ),
     );
   }
 
@@ -109,7 +105,7 @@ class _HomeBluetoothState extends State<HomeBluetooth> {
           data: ThemeData(dialogBackgroundColor: Colors.white),
           child: AlertDialog(
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8.0)),
+                borderRadius: BorderRadius.circular(16.0)),
             content: Container(
               margin: const EdgeInsets.all(0.0),
               width: 216,
@@ -151,24 +147,35 @@ class _HomeBluetoothState extends State<HomeBluetooth> {
         return Theme(
           data: ThemeData(dialogBackgroundColor: Colors.white),
           child: AlertDialog(
+            // 너비, 높이 설정
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0)),
-            title: const Center(
-                child: Text(
-              'Failed to Connect',
-              style: TextStyle(fontSize: 15),
-            )),
+                borderRadius: BorderRadius.circular(16.0)),
+            title: Center(
+              child: Container(
+                margin: const EdgeInsets.fromLTRB(0, 16, 0, 0),
+                child: const Text(
+                  'Failed to Connect',
+                  style: TextStyle(fontSize: 14),
+                ),
+              ),
+            ),
             actions: [
               Container(
                 margin: const EdgeInsets.all(0.0),
+                height: 80,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      margin: const EdgeInsets.only(right: 8),
+                      margin: const EdgeInsets.fromLTRB(24, 16, 4, 24),
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          fixedSize: const Size(100, 40),
+                          fixedSize: const Size(112, 40),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(999),
+                          ),
+                          side:
+                              const BorderSide(width: 1.0, color: Colors.grey),
                           primary: Colors.white,
                           onPrimary: Colors.grey,
                           textStyle: const TextStyle(
@@ -185,10 +192,13 @@ class _HomeBluetoothState extends State<HomeBluetooth> {
                       ),
                     ),
                     Container(
-                      margin: const EdgeInsets.only(left: 8),
+                      margin: const EdgeInsets.fromLTRB(4, 16, 24, 24),
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          fixedSize: const Size(100, 40),
+                          fixedSize: const Size(112, 40),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(999),
+                          ),
                           primary: Colors.green,
                           onPrimary: Colors.white,
                           textStyle: const TextStyle(

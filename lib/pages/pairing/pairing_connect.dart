@@ -102,26 +102,29 @@ class _PairingConnectState extends State<PairingConnect> {
           data: ThemeData(dialogBackgroundColor: Colors.white),
           child: AlertDialog(
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8.0)),
-            content: SizedBox(
-              height: 90,
+                borderRadius: BorderRadius.circular(16.0)),
+            content: Container(
+              padding: const EdgeInsets.fromLTRB(8, 0, 16, 0),
+              width: 178,
+              height: 96,
               child: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const SizedBox(
-                      height: 25.0,
-                      width: 25.0,
-                      child: CircularProgressIndicator(
+                    Container(
+                      margin: const EdgeInsets.fromLTRB(77, 8, 77, 4),
+                      height: 24.0,
+                      width: 24.0,
+                      child: const CircularProgressIndicator(
                           valueColor: AlwaysStoppedAnimation(Colors.blue),
                           strokeWidth: 5.0),
                     ),
-                    const SizedBox(
-                      height: 20.0,
-                    ),
-                    Text(
-                      message,
-                      style: const TextStyle(fontSize: 20, height: 1.5),
+                    Container(
+                      margin: const EdgeInsets.fromLTRB(56, 8, 56, 8),
+                      child: Text(
+                        message,
+                        style: const TextStyle(fontSize: 16),
+                      ),
                     ),
                   ],
                 ),
