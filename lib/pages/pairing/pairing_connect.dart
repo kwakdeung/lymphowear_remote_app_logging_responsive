@@ -65,8 +65,8 @@ class _PairingConnectState extends State<PairingConnect> {
               Container(
                 margin: const EdgeInsets.fromLTRB(91, 56, 91, 16),
                 padding: const EdgeInsets.all(0.0),
-                width: 178, // log
-                height: 20,
+                // width: 178, // log
+                // height: 20,
                 child: Image.asset(
                   'assets/images/Pairing03_text.png',
                   fit: BoxFit.fill,
@@ -75,8 +75,8 @@ class _PairingConnectState extends State<PairingConnect> {
               Container(
                 margin: const EdgeInsets.fromLTRB(63, 0, 63, 0),
                 padding: const EdgeInsets.fromLTRB(16, 32, 16, 32),
-                width: 234, // log
-                height: 166,
+                // width: 234, // log
+                // height: 166,
                 child: Image.asset(
                   'assets/images/Pairing03_image.png',
                   fit: BoxFit.fill,

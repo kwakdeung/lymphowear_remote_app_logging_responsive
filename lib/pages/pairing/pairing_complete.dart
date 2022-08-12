@@ -65,8 +65,8 @@ class _PairingCompleteState extends State<PairingComplete> {
             Container(
               margin: const EdgeInsets.fromLTRB(72.5, 40, 71.5, 24),
               padding: const EdgeInsets.fromLTRB(16, 32, 16, 32),
-              width: 216, // log
-              height: 160,
+              // width: 216, // log
+              // height: 160,
               child: Image.asset(
                 'assets/images/Pairing04_image.png',
                 fit: BoxFit.fill,
@@ -75,8 +75,8 @@ class _PairingCompleteState extends State<PairingComplete> {
             Container(
               margin: const EdgeInsets.fromLTRB(104, 0, 103, 8),
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-              width: 153, // log
-              height: 20,
+              // width: 153, // log
+              // height: 20,
               child: Image.asset(
                 'assets/images/Pairing04_title.png',
                 fit: BoxFit.fill,
@@ -85,8 +85,8 @@ class _PairingCompleteState extends State<PairingComplete> {
             Container(
               margin: const EdgeInsets.fromLTRB(97, 0, 96, 160),
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-              width: 167, // log
-              height: 20,
+              // width: 167, // log
+              // height: 20,
               child: Image.asset(
                 'assets/images/Pairing04_content.png',
                 fit: BoxFit.fill,
