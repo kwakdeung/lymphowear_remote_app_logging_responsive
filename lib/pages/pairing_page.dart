@@ -64,9 +64,6 @@ class _PairingPageState extends State<PairingPage> {
           children: [
             Container(
               margin: const EdgeInsets.fromLTRB(60, 56, 60, 24),
-              padding: const EdgeInsets.all(0.0),
-              // width: 240, // log
-              // height: 160,
               child: Image.asset(
                 'assets/images/Pairing01_image.png',
                 fit: BoxFit.fill,
@@ -74,9 +71,6 @@ class _PairingPageState extends State<PairingPage> {
             ),
             Container(
               margin: const EdgeInsets.fromLTRB(43, 0, 42, 8),
-              padding: const EdgeInsets.all(0.0),
-              // width: 275, // log
-              // height: 20,
               child: Image.asset(
                 'assets/images/Pairing01_title.png',
                 fit: BoxFit.fill,
@@ -84,7 +78,6 @@ class _PairingPageState extends State<PairingPage> {
             ),
             Container(
               margin: const EdgeInsets.fromLTRB(45, 0, 44, 0),
-              padding: const EdgeInsets.all(0.0),
               child: Image.asset(
                 'assets/images/Pairing01_content.png',
                 fit: BoxFit.fill,
@@ -103,7 +96,8 @@ class _PairingPageState extends State<PairingPage> {
                   fixedSize: const Size(320, 48),
                   primary: Colors.green,
                   onPrimary: Colors.white,
-                  textStyle: const TextStyle(fontWeight: FontWeight.bold),
+                  textStyle: const TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 onPressed: () {
                   Navigator.push(
