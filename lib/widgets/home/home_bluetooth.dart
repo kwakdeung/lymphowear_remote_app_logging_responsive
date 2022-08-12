@@ -60,13 +60,14 @@ class _HomeBluetoothState extends State<HomeBluetooth> {
                     child: const Icon(
                       Icons.bluetooth_disabled,
                       color: Colors.grey,
+                      size: 32,
                     ),
                   ),
                   Container(
                     margin: const EdgeInsets.fromLTRB(121, 0, 120, 24),
                     child: const Text(
                       'Not connected',
-                      style: TextStyle(color: Colors.grey),
+                      style: TextStyle(fontSize: 16, color: Colors.grey),
                     ),
                   ),
                   Container(
@@ -109,27 +110,33 @@ class _HomeBluetoothState extends State<HomeBluetooth> {
           child: AlertDialog(
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8.0)),
-            content: SizedBox(
-              height: 90,
+            content: Container(
+              margin: const EdgeInsets.all(0.0),
+              width: 216,
+              height: 96,
               child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const SizedBox(
-                      height: 25.0,
-                      width: 25.0,
-                      child: CircularProgressIndicator(
-                          valueColor: AlwaysStoppedAnimation(Colors.blue),
-                          strokeWidth: 5.0),
-                    ),
-                    const SizedBox(
-                      height: 20.0,
-                    ),
-                    Text(
-                      message,
-                      style: const TextStyle(fontSize: 20, height: 1.5),
-                    ),
-                  ],
+                child: Container(
+                  margin: const EdgeInsets.fromLTRB(0, 8, 0, 16),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(96, 8, 96, 4),
+                        height: 24.0,
+                        width: 24.0,
+                        child: const CircularProgressIndicator(
+                            valueColor: AlwaysStoppedAnimation(Colors.blue),
+                            strokeWidth: 5.0),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(56, 8, 56, 8),
+                        child: Text(
+                          message,
+                          style: const TextStyle(fontSize: 16),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
