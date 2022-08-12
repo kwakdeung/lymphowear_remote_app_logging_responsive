@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:lymphowear_remote_app_logging_responsive/pages/pairing/pairing_loading.dart';
-import 'package:lymphowear_remote_app_logging_responsive/ui/responsive/responsive_builder.dart';
 
 class PairingPage extends StatefulWidget {
   const PairingPage({Key? key}) : super(key: key);

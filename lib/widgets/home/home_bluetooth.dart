@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lymphowear_remote_app_logging_responsive/constants.dart';
 import 'package:lymphowear_remote_app_logging_responsive/pages/home_none.dart';
 import 'package:lymphowear_remote_app_logging_responsive/ui/responsive/responsive_builder.dart';
 import 'package:lymphowear_remote_app_logging_responsive/widgets/home/home_default.dart';

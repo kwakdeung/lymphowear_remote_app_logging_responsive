@@ -37,9 +37,19 @@ class _HomeRefreshState extends State<HomeRefresh> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Image.asset(
-              'assets/images/Home_refresh.png',
-              fit: BoxFit.fill,
+            Container(
+              margin: const EdgeInsets.fromLTRB(60, 48, 60, 32),
+              child: Image.asset(
+                'assets/images/Home_refresh_image.png',
+                fit: BoxFit.fill,
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.fromLTRB(76, 0, 75, 0),
+              child: Image.asset(
+                'assets/images/Home_refresh_content.png',
+                fit: BoxFit.fill,
+              ),
             ),
             Container(
               margin: const EdgeInsets.fromLTRB(119, 16, 119, 200),
