@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lymphowear_remote_app_logging_responsive/pages/pairing/pairing_complete.dart';
 
 class PairingConnect extends StatefulWidget {
   const PairingConnect({Key? key}) : super(key: key);
@@ -50,10 +49,10 @@ class _PairingConnectState extends State<PairingConnect> {
       ),
       body: Center(
         child: Container(
-          margin: const EdgeInsets.all(0.0),
+          margin: const EdgeInsets.fromLTRB(35, 0, 35, 80),
           width: double.infinity,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Container(
                 margin: const EdgeInsets.fromLTRB(91, 56, 91, 16),
@@ -69,19 +68,27 @@ class _PairingConnectState extends State<PairingConnect> {
                   fit: BoxFit.fill,
                 ),
               ),
+              const Spacer(),
               Container(
-                margin: const EdgeInsets.fromLTRB(20, 174, 20, 80),
-                padding: const EdgeInsets.fromLTRB(16, 32, 16, 32),
+                // margin: const EdgeInsets.fromLTRB(0, 156, 0, 0),
+                width: double.infinity,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  color: Colors.white,
+                ),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(320, 48),
-                    primary: Colors.green[500],
+                    // fixedSize: const Size(320, 48),
+                    padding: const EdgeInsets.fromLTRB(24, 12, 24, 12),
+                    primary: const Color(0xff008A40),
                     onPrimary: Colors.white,
                     textStyle: const TextStyle(
-                        fontSize: 16, fontWeight: FontWeight.bold),
+                        fontWeight: FontWeight.bold, fontSize: 16),
                   ),
                   onPressed: () => showProgressDialog('Pairing...'),
-                  child: const Text('Connect'),
+                  child: const Text(
+                    'Connect',
+                  ),
                 ),
               ),
             ],
@@ -95,10 +102,10 @@ class _PairingConnectState extends State<PairingConnect> {
     await showDialog(
       context: context,
       builder: (BuildContext context) {
-        Future.delayed(const Duration(seconds: 5), () {
-          Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context) => const PairingComplete()));
-        });
+        // Future.delayed(const Duration(seconds: 5), () {
+        //   Navigator.pushReplacement(context,
+        //       MaterialPageRoute(builder: (context) => const PairingComplete()));
+        // });
         return Theme(
           data: ThemeData(dialogBackgroundColor: Colors.white),
           child: AlertDialog(

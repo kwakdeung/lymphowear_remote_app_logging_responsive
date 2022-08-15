@@ -171,7 +171,7 @@ class HomeDefault extends StatelessWidget {
                         child: const LymphoWearState(),
                       ),
                       Container(
-                        margin: const EdgeInsets.fromLTRB(20, 24, 20, 24),
+                        margin: const EdgeInsets.fromLTRB(20, 24, 20, 72),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             border:
@@ -181,7 +181,7 @@ class HomeDefault extends StatelessWidget {
                             Collarbone(),
                             Armpit(),
                             Shoulder(),
-                            HeatingOption(),
+                            Shoulder(),
                           ],
                         ),
                       ),

@@ -17,13 +17,6 @@ class _CircularIndicatorState extends State<CircularIndicator>
   String value = 'Paring...';
   bool _active = true;
 
-  String get countText {
-    Duration count = controller.duration! * controller.value;
-    return controller.isDismissed
-        ? '${(controller.duration!.inMinutes % 60).toString().padLeft(2, '0')}:${(controller.duration!.inSeconds % 60).toString().padLeft(2, '0')}'
-        : '${(count.inMinutes % 60).toString().padLeft(2, '0')}:${(count.inSeconds % 60).toString().padLeft(2, '0')}';
-  }
-
   void _handleTap() {
     if (_active) {
       debugPrint('test true');
