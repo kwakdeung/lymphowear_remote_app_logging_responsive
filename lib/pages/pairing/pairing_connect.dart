@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lymphowear_remote_app_logging_responsive/pages/pairing/pairing_complete.dart';
 
 class PairingConnect extends StatefulWidget {
   const PairingConnect({Key? key}) : super(key: key);
@@ -102,10 +103,10 @@ class _PairingConnectState extends State<PairingConnect> {
     await showDialog(
       context: context,
       builder: (BuildContext context) {
-        // Future.delayed(const Duration(seconds: 5), () {
-        //   Navigator.pushReplacement(context,
-        //       MaterialPageRoute(builder: (context) => const PairingComplete()));
-        // });
+        Future.delayed(const Duration(seconds: 5), () {
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) => const PairingComplete()));
+        });
         return Theme(
           data: ThemeData(dialogBackgroundColor: Colors.white),
           child: AlertDialog(
