@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lymphowear_remote_app_logging_responsive/pages/home_none.dart';
-
 import 'package:lymphowear_remote_app_logging_responsive/widgets/home/home_default.dart';
 
 class HomeBluetooth extends StatefulWidget {
@@ -111,7 +110,7 @@ class _HomeBluetoothState extends State<HomeBluetooth> {
                 borderRadius: BorderRadius.circular(16.0)),
             content: Container(
               margin: const EdgeInsets.all(0.0),
-              width: 216,
+              width: double.infinity,
               height: 96,
               child: Center(
                 child: Container(
@@ -164,13 +163,14 @@ class _HomeBluetoothState extends State<HomeBluetooth> {
             ),
             actions: [
               Container(
+                //weight 없앰
                 margin: const EdgeInsets.all(0.0),
                 height: 80,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      margin: const EdgeInsets.fromLTRB(24, 16, 4, 24),
+                      margin: const EdgeInsets.fromLTRB(10, 16, 4, 24),
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           fixedSize: const Size(112, 40),
@@ -195,7 +195,7 @@ class _HomeBluetoothState extends State<HomeBluetooth> {
                       ),
                     ),
                     Container(
-                      margin: const EdgeInsets.fromLTRB(4, 16, 24, 24),
+                      margin: const EdgeInsets.fromLTRB(4, 16, 10, 24),
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           fixedSize: const Size(112, 40),
